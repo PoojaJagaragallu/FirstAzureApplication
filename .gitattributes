@@ -1,0 +1,11 @@
+* text=auto
+*.cs text eol=crlf
+*.xml text eol=crlf
+*.xaml text eol=crlf
+*.config text eol=crlf
+*.sln text eol=crlf
+*.csproj text eol=crlf
+*.ccproj text eol=crlf
+*.tsv text eol=crlf
+*.txt text eol=crlf
+*.targets text eol=crlf

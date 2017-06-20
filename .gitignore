@@ -1,0 +1,17 @@
+﻿
+*.csproj.DotSettings
+*.csproj.user
+*.DotSettings.user
+*.vspscc
+*.vssscc
+*.suo
+StyleCop.Cache
+TestResults
+Workflows/PackageBinaries
+Workflows/Packages
+.vs
+/packages/**/*/*.*
+!/packages/**/*.targets
+!/packages/**/*.props
+*/bin
+*/obj
