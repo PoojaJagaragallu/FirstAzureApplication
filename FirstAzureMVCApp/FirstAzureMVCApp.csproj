@@ -216,6 +216,24 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\AdventureContext.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdventureContext.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AdventureContext.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdventureContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AdventureContext.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdventureContext.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\adventure_users.cs">
+      <DependentUpon>AdventureContext.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -228,10 +246,27 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Models\AdventureContext.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AdventureContext.edmx</DependentUpon>
+      <LastGenOutput>AdventureContext.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\AdventureContext.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AdventureContext.edmx</DependentUpon>
+      <LastGenOutput>AdventureContext.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <EntityDeploy Include="Models\AdventureContext.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>AdventureContext.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\AdventureContext.edmx.diagram">
+      <DependentUpon>AdventureContext.edmx</DependentUpon>
     </Content>
     <None Include="Properties\PublishProfiles\FirstAzureMVCAppBySannin.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
