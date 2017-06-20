@@ -11,28 +11,32 @@ namespace FirstAzureMVCApp.Controllers
     {
         public ActionResult Index()
         {
-            using (var db = new AdventureContext())
-            {
-                // Create and save a new Blog 
-                var user = new adventure_users { firstname = "Test", lastname ="FromApp", email ="" };
-                db.adventure_users.Add(user);
-                db.SaveChanges();
+            //var db = new AdventureContext();
+            // Create and save a new Blog 
+            //var user = new adventure_users { firstname = "Test", lastname ="FromApp", email ="" };
+            //db.adventure_users.Add(user);
+            //db.SaveChanges();
 
-                // Display all Blogs from the database 
-                var query = from b in db.adventure_users
-                            orderby b.firstname
-                            select b;
+            //// Display all Blogs from the database 
+            //var query = from b in db.adventure_users
+            //            orderby b.firstname
+            //            select b;
 
-                Console.WriteLine("All blogs in the database:");
-                foreach (var item in query)
-                {
-                    Console.WriteLine(item.firstname);
-                }
+            //Console.WriteLine("All blogs in the database:");
+            //foreach (var item in query)
+            //{
+            //    Console.WriteLine(item.firstname);
+            //}
 
-                Console.WriteLine("Press any key to exit...");
-                Console.ReadKey();
-                return View();
-            }
+            //Console.WriteLine("Press any key to exit...");
+            //Console.ReadKey();
+            //return View();
+            var db = new AdventureContext();
+            return View(from user in db.adventure_users
+                        orderby user.firstname
+                        select user);
+
+            //return View(query.ToList());
         }
 
         public ActionResult About()
