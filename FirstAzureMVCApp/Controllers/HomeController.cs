@@ -11,11 +11,11 @@ namespace FirstAzureMVCApp.Controllers
     {
         public ActionResult Index()
         {
-            //var db = new AdventureContext();
-            // Create and save a new Blog 
-            //var user = new adventure_users { firstname = "Test", lastname ="FromApp", email ="" };
-            //db.adventure_users.Add(user);
-            //db.SaveChanges();
+            var db = new AdventureContext();
+            Create and save a new Blog
+            var user = new adventure_users { firstname = "Test", lastname = "FromApp", email = "" };
+            db.adventure_users.Add(user);
+            db.SaveChanges();
 
             //// Display all Blogs from the database 
             //var query = from b in db.adventure_users
